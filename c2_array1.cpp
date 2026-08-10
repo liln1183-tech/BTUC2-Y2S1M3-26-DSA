@@ -21,6 +21,7 @@ public:
     ~Scores();                    // destructor
     void add(const GameEntry &e); // add a game entry
     GameEntry remove(int i);      // remove the ith entry
+    void printList() const;
 private:
     int maxEntries;     // maximum number of entries
     int numEntries;     // actual number of entries
@@ -29,7 +30,14 @@ private:
 
 int main()
 {
+    GameEntry P1("Mike", 1105);
+    GameEntry P2("ROb", 750);
 
+    Scores HighscoreBoard(10);
+    HighscoreBoard.add(P1);
+    HighscoreBoard.add(P2);
+
+    HighscoreBoard.printList();
 
 }
 
@@ -87,6 +95,11 @@ GameEntry Scores::remove(int i)
     return e;                        // return the removed object
 }
 
+void Scores::printList() const{
+    for (int i=0; i< numEntries; i++){
+        cout << i + 1 << ": " << entries[i].getName() << " : " << entries[i].getScore() << endl;
+    }
+}
 
 
 
