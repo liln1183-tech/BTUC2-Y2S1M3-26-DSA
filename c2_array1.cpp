@@ -32,13 +32,22 @@ int main()
 {
     GameEntry P1("Mike", 1105);
     GameEntry P2("ROb", 750);
+    GameEntry P3("Paul",800);
+    GameEntry P4("Anne", 900);
+    GameEntry P5("Jack", 770);
 
     Scores HighscoreBoard(10);
     HighscoreBoard.add(P1);
     HighscoreBoard.add(P2);
+    HighscoreBoard.add(P3);
+    HighscoreBoard.add(P4);
+    HighscoreBoard.add(P5);
 
     HighscoreBoard.printList();
 
+    HighscoreBoard.remove(2);
+    cout << "new list : " << endl;
+    HighscoreBoard.printList();
 }
 
 // Constructor
