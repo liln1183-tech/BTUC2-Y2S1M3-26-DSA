@@ -2,8 +2,6 @@
 #include <string>
 using namespace std;
 
-// dsfdsafsdafsadfasdfsda
-// erwerwerewrwe
 
 class GameEntry
 { // a game score entry
