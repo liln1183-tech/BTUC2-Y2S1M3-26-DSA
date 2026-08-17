@@ -18,7 +18,10 @@ public:
     bool empty() const;             // is list empty?
     const string &front() const;    // get front element
     void addFront(const string &e); // add to front of list
+    void addAt(int k, const string& e); // add at kth node   
     void removeFront();             // remove front item list
+    void removeAt(int k, const string& e); // remove kth node  
+    void printreverse() const;
     void print() const;             // print all list elements
 private:
     StringNode *head; // pointer to the head of list
@@ -80,8 +83,7 @@ void StringLinkedList::print() const{
     StringNode * curr = head;
     while(curr != NULL){
         cout << curr->elem << " -> "; 
-        curr=curr->next; 
+        curr = curr->next; 
     }
     cout << " (End) ";
-
 }
