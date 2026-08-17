@@ -22,6 +22,15 @@ void insertionSort(int *A, int n)
         A[j + 1] = cur; // this is the proper place for cur
     }
 }
+   // Runtime complexity ->  O(n^2)  
+    //  Data size :  n 
+    // outer loop :   for (int i = 1; i < n; i++)   =>  n times 
+    // inner loop:    while ((j >= 0) && (A[j] > cur))
+            //      ->  while (j>=0)   ->  run j times   J: 0 - > n-1
+
+    // Worst case runt time: 0 + 1 + 2 + .. + n-1  =  (n-1)(n-2)/2  =  (1/2)* n^2+ ..
+
+
 
 int main(){
     int score[10] = {34, 56, 88, 77, 90, 22 , 10, 88, 95, 12};
